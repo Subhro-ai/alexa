@@ -1,4 +1,29 @@
-<p>main works!</p>
-<p>main works!</p>
-<p>main works!</p>
-<p>main works!</p>
+<div class="container">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+
+
+
+
+    <div class="container">
+        <div class="content-parent">
+            <div class="content">
+                <div class="blob"></div>
+                <h1>ALEXA DEVELOPERS CLUB</h1>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    var cursor = document.querySelector('.blob');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+</script>
