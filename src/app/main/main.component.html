@@ -10,20 +10,14 @@
     <div class="container">
         <div class="content-parent">
             <div class="content">
-                <div class="blob"></div>
-                <h1>ALEXA DEVELOPERS CLUB</h1>
+                <div class="blob" #blob></div>
+                <div class="content">
+                    <h1>ALEXA DEVELOPERS</h1>
+                    <img src="/hero-logo.svg">
+                </div>
             </div>
         </div>
     </div>
     
 </div>
 
-<script>
-    var cursor = document.querySelector('.blob');
-
-document.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-});
-</script>
