@@ -5,15 +5,15 @@ h1 {
     margin-left: 0px;
     /* margin-top: 100px; */
     width: 100vw;
-    height: 85vh;
+    height: 500vh;
     /* background-color: #757474; */
 }
 .blob {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 650px;
-    height: 650px;
+    width: 50vh;
+    height: 50vh;
     border-radius: 100%;
     background-image: linear-gradient(#1100ff 10%, #ff00f2);
     filter: blur(250px);
@@ -33,16 +33,92 @@ h1 {
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
     left: 40%;
     bottom: -15%;
+    width: 65vw;
+    height: 65vw;
     z-index: -100;
+    /* margin-right: auto; */
+    animation-timeline: scroll();
+    animation-name: moveIn;
+    animation-timing-function: ease;
 }
 
-h1 {
+#title {
     position: absolute;
     top: 50%;
     margin-left: 2vw;
     font-size: 100px;
     color: rgb(0, 172, 57);
+    animation-timeline: scroll();
+    animation-name: fade;
+}
+
+#slogan {
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    font-size: 100px;
+    text-align: center;
+    animation-timeline: scroll();
+    animation-name: fadeIn;
+}
+
+  @keyframes fade {
+    0% {
+        opacity: 100%;
+    }
+    4% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 0%;
+        top: 50%;
+
+    }
+    30% {
+        opacity: 100%;
+        top: calc(50% - 50px);
+    }
+    80% {
+        opacity: 100%;
+        top: calc(50% - 50px);
+    }
+    
+    100% {
+        opacity: 0%;
+        top: calc(50%);
+    }
+  }
+
+@keyframes moveIn {
+    14% {
+        /* left: 40%; */
+        transform: translateX(0px);
+        bottom: -15%;
+        width: 65vw; 
+    }
+
+    24% {
+        /* left: 20%; */
+        transform: translateX(-34%);
+        bottom: -15%;
+        width: 65vw; 
+    }
+    100% {
+        /* left: 20%; */
+        transform: translateX(-34%);
+        bottom: -15%;
+        width: 65vw; 
+    }
 }
